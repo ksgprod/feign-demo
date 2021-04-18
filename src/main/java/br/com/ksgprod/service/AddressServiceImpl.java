@@ -20,13 +20,13 @@ public class AddressServiceImpl implements AddressService {
 	}
 
 	@Override
-	public AddressResponse findByCep(String cep) {
+	public AddressResponse findByZipCode(String zipCode) {
 		
-		LOGGER.info("stage=init method=AddressServiceImpl.findByCep cep={}", cep);
+		LOGGER.info("stage=init method=AddressServiceImpl.findByZipCode zipCode={}", zipCode);
 		
-		AddressResponse response = this.viaCepService.findByCep(cep);
+		AddressResponse response = this.viaCepService.findByCep(zipCode);
 		
-		LOGGER.info("stage=end method=AddressServiceImpl.findByCep response={}", response);
+		LOGGER.info("stage=end method=AddressServiceImpl.findByZipCode response={}", response);
 		
 		return response;
 	}

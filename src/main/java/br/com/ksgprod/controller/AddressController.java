@@ -14,7 +14,7 @@ import br.com.ksgprod.controller.response.AddressResponse;
 import br.com.ksgprod.service.AddressService;
 
 @RestController
-@RequestMapping("/api/viacep/{cep}")
+@RequestMapping("/api/address")
 public class AddressController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AddressController.class);
@@ -25,12 +25,12 @@ public class AddressController {
 		this.service = service;
 	}
 
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AddressResponse> getAddressByCep(@PathVariable(value = "cep") String cep) throws Exception {
+	@GetMapping(value = "/{zipCode}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<AddressResponse> getAddressByZipCode(@PathVariable(value = "zipCode") String zipCode) throws Exception {
 
-		LOGGER.info("stage=init method=AddressController.getAddressByCep cep={}", cep);
+		LOGGER.info("stage=init method=AddressController.getAddressByCep zipCode={}", zipCode);
 
-		AddressResponse response = this.service.findByCep(cep);
+		AddressResponse response = this.service.findByZipCode(zipCode);
 
 		LOGGER.info("stage=end method=AddressController.getAddressByCep response={}", response);
 

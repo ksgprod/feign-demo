@@ -4,6 +4,6 @@ import br.com.ksgprod.controller.response.AddressResponse;
 
 public interface AddressService {
 	
-	AddressResponse findByCep(String cep);
+	AddressResponse findByZipCode(String zipCode);
 
 }

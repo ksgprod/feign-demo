@@ -15,6 +15,10 @@
 	<description>Demo project for Feign</description>
 	<properties>
 		<java.version>11</java.version>
+		<openfeign.version>3.0.1</openfeign.version>
+		<feign.gson.version>11.0</feign.gson.version>
+		<powermock.junit4.version>2.0.7</powermock.junit4.version>
+		<fixture.factory.version>3.1.0</fixture.factory.version>
 	</properties>
 	
 	<dependencies>
@@ -37,13 +41,26 @@
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-openfeign</artifactId>
-		    <version>3.0.1</version>
+		    <version>${openfeign.version}</version>
 		</dependency>
 		
 		<dependency>
 		    <groupId>io.github.openfeign</groupId>
 		    <artifactId>feign-gson</artifactId>
-		    <version>11.0</version>
+		    <version>${feign.gson.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.powermock</groupId>
+		    <artifactId>powermock-module-junit4</artifactId>
+		    <version>${powermock.junit4.version}</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>br.com.six2six</groupId>
+		    <artifactId>fixture-factory</artifactId>
+		    <version>${fixture.factory.version}</version>
 		</dependency>
 				
 	</dependencies>
