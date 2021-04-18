@@ -32,7 +32,7 @@ public class ViaCepAPIFactory {
 				.options(options)
 				.encoder(new GsonEncoder())
 				.decoder(new GsonDecoder())
-				.logger(new Slf4jLogger())
+				.logger(new Slf4jLogger(ViaCepAPI.class))
 				.logLevel(Level.FULL)
 				.errorDecoder(new CustomErrorDecoder())
 				.target(ViaCepAPI.class, host);
