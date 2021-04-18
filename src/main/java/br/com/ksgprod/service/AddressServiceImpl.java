@@ -24,7 +24,7 @@ public class AddressServiceImpl implements AddressService {
 		
 		LOGGER.info("stage=init method=AddressServiceImpl.findByZipCode zipCode={}", zipCode);
 		
-		AddressResponse response = this.viaCepService.findByCep(zipCode);
+		AddressResponse response = this.viaCepService.findByZipCode(zipCode);
 		
 		LOGGER.info("stage=end method=AddressServiceImpl.findByZipCode response={}", response);
 		

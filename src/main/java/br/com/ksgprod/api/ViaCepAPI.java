@@ -6,7 +6,7 @@ import feign.RequestLine;
 
 public interface ViaCepAPI {
 	
-	@RequestLine("GET /{cep}/json")
-	AddressResponse findByCep(@Param("cep") String cep);
+	@RequestLine("GET /{zipCode}/json")
+	AddressResponse findByZipCode(@Param("zipCode") String zipCode);
 
 }

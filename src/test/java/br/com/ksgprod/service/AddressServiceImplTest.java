@@ -35,7 +35,7 @@ public class AddressServiceImplTest extends BaseTest {
 		AddressResponse responseReturn = this.service.findByZipCode(response.getZipCode());
 		
 		assertNotNull(responseReturn);
-		verify(viaCepService, times(ONE)).findByCep(response.getZipCode());
+		verify(viaCepService, times(ONE)).findByZipCode(response.getZipCode());
 	
 	}
 
